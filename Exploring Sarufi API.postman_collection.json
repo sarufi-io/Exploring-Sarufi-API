@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "a0bb96e2-d2d7-4286-8281-2996601c8f69",
+		"name": "Exploring Sarufi API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29954879"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/api/api-key",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"api",
+						"api-key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/api/profile",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Chatbot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"BOT NAME\",\n  \"description\": \"PUT DESCRIPTION HERE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/chatbot",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"chatbot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Chatbot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/chatbot/2302",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"chatbot",
+						"2302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Chatbot",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Exploring Bot\",\n  \"description\": \"A bot to explore the Sarufi API\",\n  \"industry\": \"Technology\",\n  \"language\": \"swahili\",\n  \"visible_on_community\": false,\n  \"index_as_fallback\": false,\n  \"fallback_message\": \"Sorry, I didnt get that.\",\n  \"intents\": {\n        \"salamu\": [\n            \"Mambo\"\n        ],\n        \"shukrani\": [\n            \"Asante\"\n        ],\n        \"kwaheri\": [\n            \"Siku njema\"\n        ]\n    },\n    \"flows\": {\n        \"salamu\": {\n            \"message\": [\n                [\n                    \"@salamu\"\n                ]\n            ],\n            \"next_state\": \"end\"\n        },\n        \"shukrani\": {\n            \"message\": [\n                [\n                    \"Nashukuru pia\"\n                ]\n            ],\n            \"next_state\": \"end\"\n        },\n        \"kwaheri\": {\n            \"message\": [\n                [\n                    \"Karibu sana\"\n                ]\n            ],\n            \"next_state\": \"end\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/chatbot/2302",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"chatbot",
+						"2302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Chatbots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/chatbots",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"chatbots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get GPT Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/gpt-index/config/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"gpt-index",
+						"config",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update GPT Index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"qa_prompt_template\": \"You are a helpful chat bot, ready to give information and answer questions about Avicenna's resume. Your answers should show Avicenna as skilled, able, and a good fit for a job. If a question is too hard or not something you know, answer politely with 'I don't know' or 'I don't understand'. Keep a positive and lively mood during the whole conversation.\",\n  \"max_tokens\": 1024,\n  \"temperature\": 0.2,\n  \"memory\": true,\n  \"bot_id\": 1723\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/gpt-index/config/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"gpt-index",
+						"config",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Handle Bot Conversation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"chat_id\": \"93d63325-4e49-4029-8127-ee159e4fa764\",\n  \"bot_id\": \"1723\",\n  \"message\": \"Hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/conversation",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"conversation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Handle Channel Conversation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"chat_id\": \"8785ff91-12a0-4bb4-a708-e671b277ace5\",\n  \"bot_id\": 1723,\n  \"message\": \"Hi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/conversation/whatsapp",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"conversation",
+						"whatsapp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conversation Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"chat_id\": \"93d63325-4e49-4029-8127-ee159e4fa764\",\n    \"bot_id\": 2302\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/conversation/status",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"conversation",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Intents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/intents/2302",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"intents",
+						"2302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Flows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/flow/2302",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"flow",
+						"2302"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Predict Intent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bot_id\": 2302,\n    \"message\": \"mambo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/predict/intent",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"predict",
+						"intent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Conversation State",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"chat_id\": \"93d63325-4e49-4029-8127-ee159e4fa764\",\n  \"bot_id\": 1723,\n  \"next_state\": \"end\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/conversation/state",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"conversation",
+						"state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bot Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/chatbot/1723/users",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"chatbot",
+						"1723",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conversation History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/conversation/history/1723/18ef7b99-96a5-4f05-8460-89b08e7c8037",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"conversation",
+						"history",
+						"1723",
+						"18ef7b99-96a5-4f05-8460-89b08e7c8037"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Plugin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/plugin/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"plugin",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Plugin",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bot_id\": \"1723\",\n    \"theme_config\": {\n        \"primaryColor\": \"#00456e\",\n        \"borderColor\": \"lightgray\",\n        \"fontSize\": \"14\",\n        \"fontFamily\": \"InterRegular\",\n        \"sentBoxBg\": \"#D8F9D4\",\n        \"receivedBoxBg\": \"#f6f5f4\",\n        \"sentBoxColor\": \"#000000\",\n        \"receivedBoxColor\": \"#000000\",\n        \"chatboxBg\": \"#f6f5f4\",\n        \"receivedBoxLinkColor\": \"#0000FF\",\n        \"sentBoxLinkColor\": \"#FFFFFF\",\n        \"buttonSize\": \"md\",\n        \"mode\": \"light\",\n        \"title\": \"Chat\",\n        \"placement\": \"right\",\n        \"height\": \"500\",\n        \"width\": \"400\"\n    },\n    \"approved_domain\": \"172.104.253.193\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/plugin/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"plugin",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Plugin",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/plugin/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"plugin",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Plugin Unauthenticated",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://developers.sarufi.io/plugin/1723/unauthenticated",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"plugin",
+						"1723",
+						"unauthenticated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plugin Conversation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"chat_id\": \"18ef7b99-96a5-4f05-8460-89b08e7c8037\",\n  \"message\": \"Hi\",\n  \"message_type\": \"text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://developers.sarufi.io/plugin/conversation/1723",
+					"protocol": "https",
+					"host": [
+						"developers",
+						"sarufi",
+						"io"
+					],
+					"path": [
+						"plugin",
+						"conversation",
+						"1723"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "your-sarufi-api-token",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
